@@ -1,0 +1,37 @@
+/* خلفية متحركة */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(120deg, #001f3f, #0074D9, #001f3f);
+    background-size: 400% 400%;
+    animation: moveBG 10s ease infinite;
+    font-family: Arial, sans-serif;
+}
+
+/* حركة الخلفية */
+@keyframes moveBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* تنسيق الزرار */
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 20px;
+    background: white;
+    color: #001f3f;
+    font-size: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #0074D9;
+    color: white;
+    transform: scale(1.1);
+}
