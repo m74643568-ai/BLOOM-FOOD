@@ -1,47 +1,114 @@
-body {
+/* Reset بسيط */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background: linear-gradient(120deg, #001f3f>
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background متحرك */
+body {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
     background-size: 400% 400%;
-    animation: moveBG 10s ease infinite;
-    font-family: Arial, sans-serif;
-}
-
-/* حركة الخلفية */
-@keyframes moveBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
-/* حركة الخلفية */
-@keyframes moveBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* تنسيق الزرار */
-.button {
-    display: inline-block;
-    padding: 15px 25px;
-    margin: 20px;
-    background: white;
-    color: #001f3f;
-    font-size: 20px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #0074D9;
+    animation: gradientBG 20s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: white;
-    transform: scale(1.1);
+    text-align: center;
 }
-=======
 
->>>>>>> 215b4a168b01f90564c00c5481dd4201e955df53
+/* حركة الخلفية */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Header */
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    margin-bottom: 2em;
+}
+
+/* أزرار فخمة */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* زرار المنشورات */
+.post-btn {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+.post-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* زرار الاتصال */
+.call-btn {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* زرار الفيسبوك */
+.fb-btn {
+    background: linear-gradient(45deg, #4267B2, #1B74E4);
+}
+
+.fb-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* الصور داخل الأزرار */
+.btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* تأثير عام على Hover لكل الأزرار */
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+/* Responsive للموبايل */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
