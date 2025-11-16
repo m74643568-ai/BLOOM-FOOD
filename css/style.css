@@ -5,18 +5,10 @@ body {
     height: 100vh;
     background: url("../img/bg.jpg") no-repeat center center fixed;
     background-size: cover;
-    animation: animateBg 15s ease-in-out infinite alternate;
     font-family: "Cairo", sans-serif;
     text-align: center;
 }
 
-@keyframes animateBg {
-    0% {
-        background-size: 100%;
-    }
-    100% {
-        background-size: 110%;
-    }
 }
 
 /* الهيدر */
