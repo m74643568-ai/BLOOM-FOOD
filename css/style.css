@@ -1,4 +1,4 @@
-/* خلفية متحركة */
+/* خلفية ثابتة */
 body {
     margin: 0;
     padding: 0;
@@ -9,70 +9,61 @@ body {
     text-align: center;
 }
 
-}
-
-/* الهيدر */
+/* تأثير زجاجي للعنوان */
 .top-header {
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.2);
-    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 .top-header h1 {
     margin: 0;
     color: #0e3f1d;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 /* الكونتنت */
 .content {
-    margin-top: 60px;
+    margin-top: 40px;
+    padding: 0 20px;
 }
 
 .content h2 {
     color: #084d24;
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .content p {
     color: #0a3a1a;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* الأزرار */
 .buttons {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .btn {
     display: block;
-    margin: 15px auto;
-    width: 80%;
-    max-width: 300px;
-    padding: 14px 20px;
+    margin: 12px auto;
+    width: 75%;
+    max-width: 260px;
+    padding: 12px 18px;
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     border: none;
-    border-radius: 14px;
-    font-size: 20px;
+    border-radius: 12px;
+    font-size: 18px;
     color: #084d24;
     font-weight: bold;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 .btn:hover {
     background: rgba(255, 255, 255, 0.85);
-    transform: scale(1.05);
-}
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    transform: scale(1.04);
 }
