@@ -1,122 +1,195 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bloom Food</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOOM FOOD</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* الشريط اليسار */
+        .sidebar {
+            width: 280px;
+            background: url("img/wood.jpg");
+            background-size: cover;
+            padding: 20px;
+            color: white;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .order-btn {
+            background: orange;
+            padding: 12px;
+            text-align: center;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .main {
+            margin-right: 300px;
+            width: calc(100% - 300px);
+        }
+
+        /* الهيرو */
+        .hero {
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 30%;
+            right: 20px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            text-shadow: 0px 0px 10px black;
+        }
+
+        /* سلايدر */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            padding: 10px 15px;
+            background: orange;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .left-btn { left: 20px; }
+        .right-btn { right: 20px; }
+
+        /* المنتجات */
+        .products-section {
+            background: linear-gradient(to bottom, #ff6a00, #ff3300);
+            padding: 40px;
+            color: white;
+        }
+
+        .products-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            width: 30%;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .newsletter {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .subscribe-btn {
+            background: #660000;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 6px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
 <body>
 
-  <!-- فيديو الخلفية -->
-  <video autoplay muted loop id="bg-video" playsinline>
-    <source src="img/bg.mp4" type="video/mp4">
-    <!-- لو المتصفح مش شغال مع الفيديو يظهر الصورة -->
-    <img src="img/hero.jpg" alt="Bloom Food background">
-  </video>
+<div class="container">
 
-  <!-- الشريط الجانبي -->
-  <aside class="sidebar">
-    <h2 class="logo">BLOOM FOOD</h2>
+    <!-- الشريط اليساري -->
+    <div class="sidebar">
+        <h2>BLOOM FOOD</h2>
 
-    <nav class="menu">
-      <a href="index.html" class="menu-link">الرئيسية</a>
-      <a href="products.html" class="menu-link">المنتجات</a>
-      <a href="https://www.facebook.com" target="_blank" class="menu-link">فيسبوك</a>
-      <a href="tel:+201234567890" class="menu-link">اتصل بنا</a>
-    </nav>
+        <a href="#">الرئيسية</a>
+        <a href="#">منتجاتنا</a>
+        <a href="#">فيسبوك</a>
+        <a href="#">اتصل بنا</a>
 
-    <button class="order-btn">اطلب الآن</button>
+        <div class="order-btn">اطلب الآن</div>
 
-    <div class="contact-box">
-      <p>📍 القاهرة، مصر</p>
-      <p>☎ 01234567890</p>
+        <p>📍 القاهرة<br>📞 01234567890</p>
     </div>
-  </aside>
 
-  <!-- المحتوى الرئيسي -->
-  <main class="main-content">
+    <!-- المحتوى -->
+    <div class="main">
 
-    <!-- هيرو نصي فوق الفيديو -->
-    <header class="hero-textbox">
-      <h1>ALL NATURAL &amp; ORGANIC Ingredients</h1>
-      <p>أفضل منتجات الأكل الصحي بأعلى جودة</p>
-    </header>
+        <!-- الهيرو -->
+        <div class="hero">
+            <img src="img/hero.jpg" alt="food">
+            <div class="hero-text">ALL NATURAL & ORGANIC ingredients</div>
 
-    <!-- سلايدر منتجات صغير -->
-    <section class="slider-wrap">
-      <div class="slider" id="slider">
-        <div class="slide">
-          <img src="img/p1.jpg" alt="product 1">
-          <div class="slide-caption">وجبة 1</div>
+            <div class="slider-btn left-btn">‹</div>
+            <div class="slider-btn right-btn">›</div>
         </div>
-        <div class="slide">
-          <img src="img/p2.jpg" alt="product 2">
-          <div class="slide-caption">وجبة 2</div>
+
+        <!-- المنتجات -->
+        <div class="products-section">
+            <div class="products-container">
+                <div class="product">
+                    <img src="img/p1.jpg">
+                </div>
+
+                <div class="product">
+                    <img src="img/p2.jpg">
+                </div>
+
+                <div class="product">
+                    <img src="img/p3.jpg">
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h2>Eat Healthy, Live Well</h2>
+                <p>اشترك للحصول على آخر العروض</p>
+                <input type="text" placeholder="اكتب ايميلك">
+                <span class="subscribe-btn">اشتراك</span>
+            </div>
         </div>
-        <div class="slide">
-          <img src="img/p3.jpg" alt="product 3">
-          <div class="slide-caption">وجبة 3</div>
-        </div>
-      </div>
 
-      <div class="slider-controls">
-        <button id="prev">‹</button>
-        <button id="next">›</button>
-      </div>
-    </section>
-
-    <!-- نبذة -->
-    <section class="about">
-      <h2>Eat Healthy, Live Well</h2>
-      <p>نقدّم لكم أجود المنتجات الطبيعية المُحضّرة بعناية، مكونات عضوية، ونكهة مميزة تليق باسم Bloom Food.</p>
-    </section>
-
-    <!-- زرار للذهاب للمنتجات -->
-    <section class="actions">
-      <a href="products.html" class="btn-primary">شاهد المنتجات</a>
-      <a href="https://www.facebook.com" target="_blank" class="btn-ghost">تابعنا على فيسبوك</a>
-    </section>
-
-    <!-- اشتراك بالنشرة -->
-    <section class="newsletter">
-      <h3>اشترك ليصلك الجديد</h3>
-      <form id="subscribe-form">
-        <input type="email" placeholder="اكتب بريدك الإلكتروني" required>
-        <button type="submit">اشتراك</button>
-      </form>
-    </section>
-
-    <!-- footer -->
-    <footer class="site-footer">
-      <div>© 2025 Bloom Food</div>
-      <div>تم التصميم بواسطة فريق Bloom</div>
-    </footer>
-
-  </main>
-
-  <!-- جافاسكربت بسيط للسلايدر -->
-  <script>
-    (function(){
-      const slides = document.querySelectorAll('#slider .slide');
-      let idx = 0;
-      const show = i => {
-        slides.forEach((s, k) => s.style.opacity = (k===i)? '1' : '0');
-      };
-      show(0);
-      document.getElementById('next').addEventListener('click', () => { idx = (idx+1)%slides.length; show(idx); });
-      document.getElementById('prev').addEventListener('click', () => { idx = (idx-1+slides.length)%slides.length; show(idx); });
-      // autoplay
-      setInterval(()=>{ idx = (idx+1)%slides.length; show(idx); }, 4000);
-
-      // dummy subscribe
-      document.getElementById('subscribe-form').addEventListener('submit', e => {
-        e.preventDefault();
-        alert('تم الاشتراك، شكراً لك!');
-        e.target.reset();
-      });
-    })();
-  </script>
+    </div>
+</div>
 
 </body>
 </html>
