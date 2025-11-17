@@ -1,37 +1,122 @@
-k<!doctype html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLOOM FOOD</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bloom Food</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<video autoplay muted loop id="bg-video">
+
+  <!-- فيديو الخلفية -->
+  <video autoplay muted loop id="bg-video" playsinline>
     <source src="img/bg.mp4" type="video/mp4">
-</video>
+    <!-- لو المتصفح مش شغال مع الفيديو يظهر الصورة -->
+    <img src="img/hero.jpg" alt="Bloom Food background">
+  </video>
 
-  <header class="top-header">
-    <h1>BLOOM FOOD</h1>
-  </header>
+  <!-- الشريط الجانبي -->
+  <aside class="sidebar">
+    <h2 class="logo">BLOOM FOOD</h2>
 
-  <main class="content">
+    <nav class="menu">
+      <a href="index.html" class="menu-link">الرئيسية</a>
+      <a href="products.html" class="menu-link">المنتجات</a>
+      <a href="https://www.facebook.com" target="_blank" class="menu-link">فيسبوك</a>
+      <a href="tel:+201234567890" class="menu-link">اتصل بنا</a>
+    </nav>
 
-    <h2>مرحبًا بكم في BLOOM FOOD</h2>
-    <p>أفضل منتجات الأكل الصحي بأعلى جودة.</p>
+    <button class="order-btn">اطلب الآن</button>
 
-    <div class="buttons">
-
-      <a class="btn" href="https://www.facebook.com/share/17VsasWv42/">صفحتنا على فيسبوك</a>
-
-      <a href="products.html" class="btn">المنتجات</a>
-
-      <a class="btn" href="tel:+201025533375">اتصل بنا</a>
-
+    <div class="contact-box">
+      <p>📍 القاهرة، مصر</p>
+      <p>☎ 01234567890</p>
     </div>
+  </aside>
+
+  <!-- المحتوى الرئيسي -->
+  <main class="main-content">
+
+    <!-- هيرو نصي فوق الفيديو -->
+    <header class="hero-textbox">
+      <h1>ALL NATURAL &amp; ORGANIC Ingredients</h1>
+      <p>أفضل منتجات الأكل الصحي بأعلى جودة</p>
+    </header>
+
+    <!-- سلايدر منتجات صغير -->
+    <section class="slider-wrap">
+      <div class="slider" id="slider">
+        <div class="slide">
+          <img src="img/p1.jpg" alt="product 1">
+          <div class="slide-caption">وجبة 1</div>
+        </div>
+        <div class="slide">
+          <img src="img/p2.jpg" alt="product 2">
+          <div class="slide-caption">وجبة 2</div>
+        </div>
+        <div class="slide">
+          <img src="img/p3.jpg" alt="product 3">
+          <div class="slide-caption">وجبة 3</div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button id="prev">‹</button>
+        <button id="next">›</button>
+      </div>
+    </section>
+
+    <!-- نبذة -->
+    <section class="about">
+      <h2>Eat Healthy, Live Well</h2>
+      <p>نقدّم لكم أجود المنتجات الطبيعية المُحضّرة بعناية، مكونات عضوية، ونكهة مميزة تليق باسم Bloom Food.</p>
+    </section>
+
+    <!-- زرار للذهاب للمنتجات -->
+    <section class="actions">
+      <a href="products.html" class="btn-primary">شاهد المنتجات</a>
+      <a href="https://www.facebook.com" target="_blank" class="btn-ghost">تابعنا على فيسبوك</a>
+    </section>
+
+    <!-- اشتراك بالنشرة -->
+    <section class="newsletter">
+      <h3>اشترك ليصلك الجديد</h3>
+      <form id="subscribe-form">
+        <input type="email" placeholder="اكتب بريدك الإلكتروني" required>
+        <button type="submit">اشتراك</button>
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer class="site-footer">
+      <div>© 2025 Bloom Food</div>
+      <div>تم التصميم بواسطة فريق Bloom</div>
+    </footer>
 
   </main>
+
+  <!-- جافاسكربت بسيط للسلايدر -->
+  <script>
+    (function(){
+      const slides = document.querySelectorAll('#slider .slide');
+      let idx = 0;
+      const show = i => {
+        slides.forEach((s, k) => s.style.opacity = (k===i)? '1' : '0');
+      };
+      show(0);
+      document.getElementById('next').addEventListener('click', () => { idx = (idx+1)%slides.length; show(idx); });
+      document.getElementById('prev').addEventListener('click', () => { idx = (idx-1+slides.length)%slides.length; show(idx); });
+      // autoplay
+      setInterval(()=>{ idx = (idx+1)%slides.length; show(idx); }, 4000);
+
+      // dummy subscribe
+      document.getElementById('subscribe-form').addEventListener('submit', e => {
+        e.preventDefault();
+        alert('تم الاشتراك، شكراً لك!');
+        e.target.reset();
+      });
+    })();
+  </script>
 
 </body>
 </html>
