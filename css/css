@@ -1,0 +1,20 @@
+.products {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.product {
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}

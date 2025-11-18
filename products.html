@@ -1,52 +1,37 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>المنتجات - Bloom Food</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - Bloom Food</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <aside class="sidebar">
-    <h2 class="logo">BLOOM FOOD</h2>
-    <nav class="menu">
-      <a href="index.html" class="menu-link">الرئيسية</a>
-      <a href="products.html" class="menu-link">المنتجات</a>
-      <a href="https://facebook.com" class="menu-link">فيسبوك</a>
-    </nav>
-  </aside>
 
-  <main class="main-content">
-    <header class="hero-textbox"><h1>منتجاتنا</h1><p>أشهى الوجبات الصحية</p></header>
+<div class="bg"></div>
 
-    <section class="products-grid">
-      <div class="product-card">
-        <img src="img/p1.jpg" alt="">
-        <h3>Meal 1</h3>
-        <p>وصف مختصر للمنتج 1</p>
-      </div>
-      <div class="product-card">
-        <img src="img/p2.jpg" alt="">
-        <h3>Meal 2</h3>
-        <p>وصف مختصر للمنتج 2</p>
-      </div>
-      <div class="product-card">
-        <img src="img/p3.jpg" alt="">
-        <h3>Meal 3</h3>
-        <p>وصف مختصر للمنتج 3</p>
-      </div>
-      <!-- ضيف منتجات بنفس الكود -->
-    </section>
+<header class="top-header">
+    <h1>منتجات Bloom Food</h1>
+</header>
 
-    <footer class="site-footer">© 2025 Bloom Food</footer>
-  </main>
+<section class="products">
 
-  <style>
-    .products-grid{ display:flex; gap:18px; flex-wrap:wrap; margin-top:18px }
-    .product-card{ background:rgba(255,255,255,0.9); padding:12px; border-radius:10px; width:calc(33% - 12px); box-shadow:0 6px 18px rgba(0,0,0,0.08) }
-    .product-card img{ width:100%; border-radius:8px; }
-    @media (max-width:900px){ .product-card{ width:100% } }
-  </style>
+    <div class="product">
+        <img src="img/p1.jpg">
+        <h3>Healthy Salad</h3>
+    </div>
+
+    <div class="product">
+        <img src="img/p2.jpg">
+        <h3>Fresh Detox</h3>
+    </div>
+
+    <div class="product">
+        <img src="img/p3.jpg">
+        <h3>Protein Snack</h3>
+    </div>
+
+</section>
+
 </body>
 </html>
-
